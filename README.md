@@ -1,5 +1,3 @@
-# 
-
 ## The AWK Programming Language
 
 ### Ch1 AN AWK Tutorial
@@ -105,4 +103,10 @@
 - Control Flow Statement
   - next: causes awk to fetch the next input line and begin matching patterns starting from the first pattern-action statement
   - exit: In an END action, the exit statement causes the program to terminate; In any other action, it causes the program to behave as if the end of the input had occured; no more input is read, and the END actions, if any, are excuted. If an exit statement contains an expression (exit expr), it causes awk to return the value of expr as its exit status unless overridden by a subsequent error or exit. If there is no expr, the exit status is zero.
-  - ​
+
+- Arrays
+- Array的索引是字符串，因此arrays in awk are called "associative arrays"
+- 判断某个索引在array中是否存在 : subscript in A；A[subscript]存在时返回1，否则返回0。不要使用if (pop["Africa"] != " ")判断，这样会创建pop["Africa"]
+- 删除数组元素：del  array[subscript]
+- split(str, arr, fs) 函数返回值是field的个数。
+- 当使用数字作为索引时，是反直觉的，10作为字符类型，会出现在字符类型的2的前面
