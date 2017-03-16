@@ -69,7 +69,6 @@
   - 字符串匹配Pattern (String-Matching Patterns)。Awk提供正则表达式，字符串匹配Pattern检验一个字符串是否包含某个正则表达式匹配上的子串。(A string-matching pattern tests whether a string contains a substring matched by a regular expression)。最简单的正则表达式是一串字母和数字，用来匹配它本身。将一个正则表达式变成一个字符串匹配pattern的方法是用‘//’把正则表达式包起来，需要注意的是正则表达是对空格敏感，/Asia/ 和 / Asia /匹配效果是不同的。总共有三种类型的String-Matching Pattern，/regexpr/, expression ~ /regexpr/, expression !~ /regexpr/; /regexpr/实际上等价于 $0 ~ /regexpr/
     - 此处穿插正则表达式的概念：
       - 正则表达式的元字符包括：'\' '^' '$' '.' '[' ']' '|' '(' ')' '*' '+' '?'
-      - ​
   - 复合pattern, 此pattern使用括号和逻辑运算符 || && ! 来复合其它pattern，当表达式真时，匹配当前行成功。&& 和 || 从左往右判断操作数，一旦能确定整个表达式的真假，立即停止计算
   - Range pattern
     - 匹配从第一行匹配到pattern1开始，知道第一个匹配到pattern2的行结束，如果没有发现能匹配到pattern2的行，则从第一个匹配到pat1开始，一直匹配到输入的最后一行
