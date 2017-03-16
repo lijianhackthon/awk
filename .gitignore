@@ -1,2 +1,4 @@
 # ignore all *~ files
 *~
+
+# ignore all files in junkfile
